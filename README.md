@@ -173,7 +173,7 @@ src/main/java/com/example/lab10/
 ├── Lab10Application.java          ← ✅ มีให้แล้ว
 ├── AppConfig.java                 ← ✅ มีให้แล้ว (@Bean config)
 ├── model/
-│   └── Product.java               ← ✅ มีให้แล้ว (ครบ 100%)
+│   └── Product.java               ← ✅ มีให้แล้ว 
 ├── repository/
 │   └── ProductRepository.java     ← ❌ TODO: เติม method body (5 methods)
 ├── service/
