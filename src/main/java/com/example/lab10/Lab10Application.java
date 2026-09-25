@@ -20,4 +20,16 @@ public class Lab10Application {
     public static void main(String[] args) {
         SpringApplication.run(Lab10Application.class, args);
     }
+
+    @org.springframework.context.annotation.Bean
+    org.springframework.boot.CommandLineRunner demo(com.example.lab10.client.ProductWebClient webClient) {
+        return args -> {
+            webClient.getAllProducts()
+                    .map(p -> p.getName())
+                    .defaultIfEmpty("No products")
+                    .subscribe(name -> System.out.println("[WebClient] " + name));
+
+            webClient.getDiscountedPrice("1").subscribe();
+        };
+    }
 }
